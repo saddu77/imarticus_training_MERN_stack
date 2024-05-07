@@ -1,0 +1,299 @@
+06/03/2024:
+
+JSON: Java Script Object Notation
+
+	{
+	"users":[{
+	   "id":1,
+	   "email":"alex@gmail.com",
+	   "password:"123456"
+        },
+	{
+	   "id":2,
+	   "email":"bob@gmail.com",
+	   "password:"123456"
+        },
+	{
+	   "id":3,
+	   "email":"alex@gmail.com",
+	   "password:"123456"
+        }]
+	}
+
+Pre Requistites:
+		Basics of JavaScript
+		ES6 Syntax
+		
+
+Set Up:
+	node -v
+	npm -v
+	
+	
+	npx create-react-app hello-app
+	cd hello-app
+	npm start
+	
+	VSCode Installed
+	
+Introduction to React:
+	React uses JSX
+	Dynamic web App,Responsive and SPA(Single Page Application)
+
+HelloWorld Execution :
+
+Components in React:
+			1. Functional Component
+			2. Class Component
+
+
+Task1:   ES6 
+-----
+	1. write a script to Perform addition,substraction,multiplication and division.
+	2. Write to script to generate fibonacci series.
+	3. Write a script to find a factorial of number.
+	4. Write a script to find string is Palindrome or not.
+	5. Write a script to reverse an Array.
+	
+
+Task2:
+-----
+	Create a new folder : Assignment
+				Day1:
+					create a new React App and implement functional and class component.
+
+	npm install react-router-dom
+
+	
+	Abhiman AV     : Online Shopping
+	Anusha Chilaka : Online Ticketing
+	Gokul V	       : Online Bike Bookings for Rent
+	Madhav Nair    : HealthCare Monitoring
+	Praveensankar CJ: Online Hotel Reservation
+	Reswin Anto    :  Online Music Application
+	Santosh Naganur : Sports Application
+	Suresh Anandharaj : Managing Skills of a Job Seeker
+
+	UI : HTML5,CSS3,JS,ES6-concepts,React-Bootstrap or Angularor VueJS
+	APIs : Java,Node
+		Micro services
+	Database : MySQL and MongoDB
+	Testing : Junit5,Jest and Enzyme or jasmine
+	Deployments : locally(in our laptop),DOcker,Kubernetes and ANsible
+
+
+
+	Project Title: Shopify App
+	Problem Statment: 
+			......
+			......
+	Solution:
+	Technolgy:
+	Tools:
+	Design:
+	Future Enhancement:
+				
+	JSON-SERVER:
+	------------
+			npm i json-server
+
+	1. created a new folder: data
+	2. created a new file : users.json
+	3. added data into users.json
+	4. npm i json-server -g
+	5. json-server --version
+	6. json-server --watch users.json
+	7. EndPoints(APIs) are ready to access data:
+		
+	   Read	: Get All users : http://localhost:3000/users
+	   Read	: Get User By Id: http://localhost:3000/users/001A
+
+	   Create: Post User 
+			    http://localhost:3000/users/
+				we will post data in body in json form using Postman
+	
+	   Update: Put User By Id
+			http://localhost:3000/users/
+
+	   Delete: Delete User By Id
+			http://localhost:3000/users/
+
+	https://react-bootstrap.netlify.app/docs/layout/grid
+	
+
+	React Custom hooks:
+	------------------
+				Custom hooks are JavaScript functions starting with "use" containing reusable logic.
+
+				Similar to useState and useEffect are reusable components.
+				
+			 
+				Reason to use custom hooks is to maintain the concept of DRY(Dont Repeat Yourself) in React apps.
+
+	Modules in Node JS:
+
+	1. Core Modules: built in modules 
+
+	2. Local Modules: 
+
+	3. Third party Modules
+	
+
+
+	- Http Server
+
+	- Express:
+		Routing:
+			GET POST PUT and DELETE
+
+	
+	MySQL: Structured Query Language:
+		Tools:
+			mysql server:
+					host: 127.0.0.0.1 or localhost
+					username: root
+					password: admin
+					port:     3306
+		
+		database
+			tables	
+				rows and cols
+
+		sampleDB:
+			users
+				id    username   password
+				1      alex	   alex123
+				2      bob 	   bob123
+				..	..	   ....
+	
+
+
+
+	NoSQL:
+		MongoDB
+
+		database
+			collections
+				documents
+
+					{
+					  "_id":"",
+					  "username":"alex",
+					  "password":"123456",
+					}
+
+		
+
+	1. Open a command prompt
+	2. mongosh
+	3. show dbs;   to list all databases
+	4. use imarticus_db;  this will use existing db else creates a new db if not exist
+	5. show collections;  lists all collections 
+	6. db.createCollection("users"); creates a new collection 
+	7. db.users.find(); 	retrieves all documents						:      Read
+	8. db.users.find().count()  gives the total count of documents
+	9.  db.users.insert({"username":"alex","password":"123456"}); 	to create a new document :      Create
+	10. db.users.find({ _id: ObjectId("662a35d1433278ce2b66823b")}) to fetch record by Id    : 	Read by Id
+	11. db.users.update({_id: ObjectId("662a35d6433278ce2b66823c")},{$set:{password:"888888"}}); : update By Id
+	12. db.users.remove({_id: ObjectId("662a35d6433278ce2b66823c")});			     :   Delete By Id
+
+
+	Task:
+		Perform CRUD Operation for modules respectively.Consider 10 fields in a document.
+		
+
+		
+	Tasks:
+		1. CRUD implementation: Express.js and mongoDB
+			APIs implementation for Users Module
+
+		2. API calls using axios in React performing CRUD Operation
+		
+
+
+		db.products.insert(
+				   {
+					p_name:"Laptop",
+					p_qty:5,
+					p_price:55000,
+					"orders":[
+						  {
+						 order_id:101,
+						 order_date:"30-04-2024",
+``						 order_qty: 3,
+						 order_amt: 165000,
+						 order_status: "dispatched"
+						  }
+						]
+				   });
+
+
+
+
+
+
+
+	db.products.insert({p_name:"Desktop",p_qty:5,p_price:25000,"orders":[{order_id:1011,order_date:"30-04-2024",order_qty: 3,order_amt: 75000, order_status: "dispatched"},{order_id:1012,order_date:"02-05-2024",order_qty: 2,order_amt: 50000, order_status: "confirmed"}]});
+
+
+
+Create a sample document:
+
+1. Customer and Billing
+2. Ticket and Passenger
+3. Doctor and Patient
+4. Customer and Bookings
+5. Bike and Bookings
+6. Music and Artist
+7. Profile and Requiements
+8. Team and Players
+
+
+
+
+	Auth Demo:
+-----------------------------------------------------------------------------
+		Test API: http://localhost:8080
+-----------------------------------------------------------------------------		
+		Sign Up	  http://localhost:8080/api/auth/signup
+
+					{
+   					 "username":"alex",
+   					 "email":"alex@gmail.com",
+   					 "password":"alex123"
+					}
+------------------------------------------------------------------------------
+		Sign In http://localhost:8080/api/auth/signin
+
+					{
+    					"username":"alex",
+    					"password":"alex123"
+					}
+
+					Response:
+						{
+   						 "id": "6638a9d03ce5da6a0dc268bc",
+    						 "username": "alex",
+    						 "email": "alex@gmail.com",
+  						  "roles": [
+        						"ROLE_USER"
+    						],
+    						"accessToken": 									"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MzhhOWQwM2NlNWRhNmEwZGMyNjhiYyIsImlhdCI6MTcxNDk4OTc2MiwiZXhwIjoxNzE1MDc2MTYyfQ.KGXrEuUiSTwRyPj9oG0U4iCWKansMc8_z87zijJqpGE"
+}
+--------------------------------------------------------------------------------
+		http://localhost:8080/api/test/user
+		
+			x-access-token :
+					eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MzhhOWQwM2NlNWRhNmEwZGMyNjhiYyIsImlhdCI6MTcxNDk4OTc2MiwiZXhwIjoxNzE1MDc2MTYyfQ.KGXrEuUiSTwRyPj9oG0U4iCWKansMc8_z87zijJqpGE
+
+
+============================================================================================================================================================
+
+	git init
+	git status
+	git clone <repo_link>
+	cd repo_folder
+	git status
+	git add .
+	git status
+

@@ -1,0 +1,27 @@
+package com.example.dsc;
+
+class LLNode{
+	int data;
+	LLNode next;
+//	Parameterized constructor
+//	LLNode(int data){	
+//		this.data=data;
+//		this.next=null;
+//		}
+	public LLNode(int data) {
+		super();
+		this.data = data;
+		this.next = null;
+	}
+	
+}
+
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

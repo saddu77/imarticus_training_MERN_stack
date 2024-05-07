@@ -1,0 +1,35 @@
+{
+  "name": "reason-music-player",
+  "version": "0.1.0",
+  "homepage": "http://sophiabrandt.github.io/reason-music-player",
+  "scripts": {
+    "start": "concurrently -k \"npm run start:bsb\" \"npm run start:webpack\"",
+    "start:bsb": "bsb -clean-world -make-world -w",
+    "start:webpack": "webpack-dev-server --port 3000",
+    "build": "npm run build:webpack",
+    "build:webpack": "NODE_ENV=production webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "format": "refmt src/*.re"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "Sophia Brandt",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reason-react": ">=0.9.1"
+  },
+  "devDependencies": {
+    "bs-platform": "^8.2.0",
+    "concurrently": "^5.3.0",
+    "file-loader": "^6.0.0",
+    "gh-pages": "^3.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

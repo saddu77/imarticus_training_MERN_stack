@@ -1,0 +1,67 @@
+package com.example.dsc;
+
+class LLNode{
+	int data;
+	LLNode next;
+//	Parameterized constructor
+	LLNode(int data){	
+		this.data=data;
+		this.next=null;
+		}
+}
+
+
+public class Demo {
+	LLNode head;
+	
+	LLNode insertInBeg(int key,LLNode head){
+	LLNode ttmp=new LLNode(key);
+	if(head==null)
+		head=ttmp;
+	else {
+		ttmp.next=head;
+		head=ttmp;
+		}
+	return head;
+	}
+
+	LLNode insertInEnd(int key,LLNode head)	{
+		LLNode ttmp=new LLNode(key);
+		LLNode ttmp1=head;
+		if(ttmp1==null)
+			head=ttmp;
+		else
+			{
+			while(ttmp1.next!=null)
+				ttmp1=ttmp1.next;
+				ttmp1.next=ttmp;
+			}
+		return head;
+	}
+
+	LLNode insertAtPos(int key,int pos,LLNode head)
+	{
+	LLNode ttmp=new LLNode(key);
+	if(pos==1)
+	{
+	ttmp.next=head;
+	head=ttmp;
+	}
+	else
+	{
+	LLNode ttmp1=head;
+	for(int i=1;ttmp1!=null && i<pos;i++)
+	ttmp1=ttmp1.next;
+	ttmp.next=ttmp1.next;
+	ttmp1.next=ttmp;
+	}
+	return head;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
